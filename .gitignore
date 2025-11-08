@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -8,6 +9,13 @@ lerna-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+=======
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+>>>>>>> eeef0f5 (Initial commit: BioRelm virtual wildlife platform)
 
 # Runtime data
 pids
@@ -19,8 +27,12 @@ pids
 lib-cov
 
 # Coverage directory used by tools like istanbul
+<<<<<<< HEAD
 coverage
 *.lcov
+=======
+coverage/
+>>>>>>> eeef0f5 (Initial commit: BioRelm virtual wildlife platform)
 
 # nyc test coverage
 .nyc_output
@@ -41,11 +53,16 @@ build/Release
 node_modules/
 jspm_packages/
 
+<<<<<<< HEAD
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 
 # TypeScript cache
 *.tsbuildinfo
+=======
+# TypeScript v1 declaration files
+typings/
+>>>>>>> eeef0f5 (Initial commit: BioRelm virtual wildlife platform)
 
 # Optional npm cache directory
 .npm
@@ -53,8 +70,16 @@ web_modules/
 # Optional eslint cache
 .eslintcache
 
+<<<<<<< HEAD
 # Optional stylelint cache
 .stylelintcache
+=======
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+>>>>>>> eeef0f5 (Initial commit: BioRelm virtual wildlife platform)
 
 # Optional REPL history
 .node_repl_history
@@ -65,10 +90,16 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
+<<<<<<< HEAD
 # dotenv environment variable files
 .env
 .env.*
 !.env.example
+=======
+# dotenv environment variables file
+.env
+.env.test
+>>>>>>> eeef0f5 (Initial commit: BioRelm virtual wildlife platform)
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -76,7 +107,10 @@ web_modules/
 
 # Next.js build output
 .next
+<<<<<<< HEAD
 out
+=======
+>>>>>>> eeef0f5 (Initial commit: BioRelm virtual wildlife platform)
 
 # Nuxt.js build / generate output
 .nuxt
@@ -84,6 +118,7 @@ dist
 
 # Gatsby files
 .cache/
+<<<<<<< HEAD
 # Comment in the public line in if your project uses Gatsby and not Next.js
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
@@ -107,6 +142,13 @@ dist
 # Docusaurus cache and generated files
 .docusaurus
 
+=======
+public
+
+# Vuepress build output
+.vuepress/dist
+
+>>>>>>> eeef0f5 (Initial commit: BioRelm virtual wildlife platform)
 # Serverless directories
 .serverless/
 
@@ -116,15 +158,19 @@ dist
 # DynamoDB Local files
 .dynamodb/
 
+<<<<<<< HEAD
 # Firebase cache directory
 .firebase/
 
+=======
+>>>>>>> eeef0f5 (Initial commit: BioRelm virtual wildlife platform)
 # TernJS port file
 .tern-port
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
+<<<<<<< HEAD
 # yarn v3
 .pnp.*
 .yarn/*
@@ -137,3 +183,33 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+=======
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Temporary folders
+tmp/
+temp/
+>>>>>>> eeef0f5 (Initial commit: BioRelm virtual wildlife platform)

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioRelm - Virtual Zoo Experience</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/pannellum.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background Elements -->
+    <div class="floating-leaves"></div>
+    <div class="floating-animals"></div>
+
+    <!-- Navigation -->
+    <nav class="jungle-nav">
+        <div class="nav-container">
+            <div class="logo-section">
+                <h1 class="logo"><i class="fas fa-paw"></i> BioRelm</h1>
+                <span class="tagline">Virtual Wildlife Sanctuary</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#animals" class="nav-link"><i class="fas fa-kiwi-bird"></i> Animals</a></li>
+                <li><a href="#safari" class="nav-link"><i class="fas fa-binoculars"></i> Virtual Safari</a></li>
+                <li><a href="#quiz" class="nav-link"><i class="fas fa-puzzle-piece"></i> Quiz</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="sound-toggle" id="soundToggle">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="jungle-canopy"></div>
+            <div class="sun-rays"></div>
+            <div class="floating-wildlife">
+                <div class="wildlife-item bird"></div>
+                <div class="wildlife-item butterfly"></div>
+                <div class="wildlife-item monkey"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2 class="hero-title">Welcome to the <span class="highlight">Wild</span></h2>
+                <p class="hero-subtitle">Explore the wonders of wildlife through our immersive virtual zoo experience</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Species</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Habitats</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Access</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <button class="cta-button primary" id="exploreBtn">
+                    <i class="fas fa-compass"></i>
+                    Start Exploring
+                </button>
+                <button class="cta-button secondary" id="safariBtn">
+                    <i class="fas fa-vr-cardboard"></i>
+                    Virtual Safari
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to Explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Animals Section -->
+    <section id="animals" class="animals-section">
+        <div class="section-header">
+            <h2>Discover Amazing Species</h2>
+            <p>Learn about animals from around the world</p>
+        </div>
+        
+        <div class="filter-controls">
+            <div class="filter-group">
+                <label>Filter by:</label>
+                <select id="habitatFilter">
+                    <option value="all">All Habitats</option>
+                    <option value="jungle">Jungle</option>
+                    <option value="savanna">Savanna</option>
+                    <option value="forest">Forest</option>
+                    <option value="arctic">Arctic</option>
+                    <option value="aquatic">Aquatic</option>
+                </select>
+                <select id="dietFilter">
+                    <option value="all">All Diets</option>
+                    <option value="carnivore">Carnivore</option>
+                    <option value="herbivore">Herbivore</option>
+                    <option value="omnivore">Omnivore</option>
+                </select>
+                <select id="statusFilter">
+                    <option value="all">All Status</option>
+                    <option value="endangered">Endangered</option>
+                    <option value="vulnerable">Vulnerable</option>
+                    <option value="least concern">Least Concern</option>
+                    <option value="extinct">Extinct</option>
+                </select>
+            </div>
+            <div class="search-box">
+                <input type="text" id="animalSearch" placeholder="Search animals...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <div class="animals-grid" id="animalsGrid">
+            <!-- Animal cards will be populated by JavaScript -->
+        </div>
+
+        <div class="load-more-container">
+            <button class="load-more-btn" id="loadMoreBtn">
+                <i class="fas fa-plus"></i> Load More Animals
+            </button>
+        </div>
+    </section>
+
+    <!-- Virtual Safari Section -->
+    <section id="safari" class="safari-section">
+        <div class="section-header">
+            <h2>360° Virtual Safari</h2>
+            <p>Immerse yourself in different habitats</p>
+        </div>
+        
+        <div class="safari-container">
+            <div id="panorama" class="panorama-viewer"></div>
+            
+            <div class="safari-controls">
+                <div class="scene-selector">
+                    <h3>Choose Your Habitat:</h3>
+                    <div class="scene-buttons">
+                        <button class="scene-btn active" data-scene="jungle">
+                            <i class="fas fa-tree"></i>
+                            Jungle
+                        </button>
+                        <button class="scene-btn" data-scene="savanna">
+                            <i class="fas fa-sun"></i>
+                            Savanna
+                        </button>
+                        <button class="scene-btn" data-scene="waterfall">
+                            <i class="fas fa-water"></i>
+                            Waterfall
+                        </button>
+                        <button class="scene-btn" data-scene="arctic">
+                            <i class="fas fa-snowflake"></i>
+                            Arctic
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="safari-info">
+                    <div id="safariInfoContent">
+                        <h4>Click on hotspots to discover wildlife!</h4>
+                        <p>Look for <i class="fas fa-bullseye hotspot-icon"></i> icons in the panorama</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz-section">
+        <div class="section-header">
+            <h2>Wildlife Knowledge Challenge</h2>
+            <p>Test your knowledge about food chains and ecosystems</p>
+        </div>
+        
+        <div class="quiz-container" id="quizContainer">
+            <!-- Quiz content will be loaded here -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>About BioRelm</h2>
+                <p>BioRelm is an immersive educational platform designed to bring the wonders of wildlife to students and nature enthusiasts worldwide. Our mission is to foster appreciation and understanding of biodiversity through interactive virtual experiences.</p>
+                
+               <section id="features" class="features-section">
+    <div class="container">
+        <h2 class="section-title">Why Choose BioRelm?</h2>
+        <p class="section-subtitle">Experience wildlife education like never before</p>
+        
+        <div class="features-grid">
+            <div class="feature">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Educational</h3>
+                <p>Comprehensive information about species and ecosystems</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-vr-cardboard"></i>
+                <h3>Immersive</h3>
+                <p>360° virtual tours and interactive experiences</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-gamepad"></i>
+                <h3>Interactive</h3>
+                <p>Engaging quizzes and learning activities</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-globe-americas"></i>
+                <h3>Accessible</h3>
+                <p>Available to everyone, everywhere</p>
+            </div>
+        </div>
+    </div>
+</section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="jungle-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-paw"></i> BioRelm</h3>
+                <p>Exploring wildlife through technology</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#animals">Animals</a></li>
+                    <li><a href="#safari">Virtual Safari</a></li>
+                    <li><a href="#quiz">Quiz</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Teacher Resources</a></li>
+                    <li><a href="#">Learning Materials</a></li>
+                    <li><a href="#">Conservation Info</a></li>
+                    <li><a href="#">Research Papers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope"></i> info@biorelm.com</p>
+                <p><i class="fas fa-phone"></i> 99999 55555</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BioRelm Virtual Zoo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Animal Modal -->
+    <div id="animalModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalContent">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Results Modal -->
+    <div id="quizResultsModal" class="modal">
+        <div class="modal-content quiz-results">
+            <span class="close-modal">&times;</span>
+            <div id="quizResultsContent">
+                <!-- Quiz results will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="backgroundMusic" loop>
+        <source src="assets/sounds/jungle-ambience.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    
+    <!-- Internal Scripts -->
+    <script>
+        // Animal Data (embedded for immediate functionality)
+        const animalData = [
+            {
+                id: 1,
+                name: "Bengal Tiger",
+                scientificName: "Panthera tigris tigris",
+                image: "assets/images/animals/tiger.jpg",
+                habitat: "jungle",
+                diet: "carnivore",
+                status: "endangered",
+                location: "Indian Subcontinent",
+                size: "2.7-3.1 meters, 180-258 kg",
+                description: "The Bengal tiger is a majestic big cat known for its striking orange coat with black stripes. Each tiger's stripe pattern is unique, much like human fingerprints. They are solitary hunters and primarily nocturnal.",
+                facts: [
+                    "Largest tiger species in the world",
+                    "Can swim up to 6 kilometers",
+                    "Stripes help them camouflage in tall grass",
+                    "A single tiger can eat up to 40 kg of meat in one night"
+                ],
+                conservationInfo: "Habitat loss and poaching have severely reduced their population. Conservation efforts include protected reserves and anti-poaching measures.",
+                dietInfo: "Primarily hunts deer, wild boar, and other large mammals. They are apex predators in their ecosystem.",
+                behavior: "Solitary animals that mark their territory with urine and scratch marks. They are most active during dawn and dusk."
+            },
+            {
+                id: 2,
+                name: "Mountain Gorilla",
+                scientificName: "Gorilla beringei beringei",
+                image: "assets/images/animals/gorilla.jpg",
+                habitat: "forest",
+                diet: "herbivore",
+                status: "endangered",
+                location: "Central Africa",
+                size: "1.4-1.8 meters, 135-220 kg",
+                description: "Mountain gorillas are the largest living primates and share 98% of their DNA with humans. They live in family groups led by a dominant silverback male.",
+                facts: [
+                    "Use tools like sticks to measure water depth",
+                    "Build new nests every day from vegetation",
+                    "Communicate using 25 different sounds",
+                    "Infants ride on their mothers' backs for 3-4 years"
+                ],
+                conservationInfo: "Threatened by habitat loss, poaching, and human diseases. Only about 1,000 remain in the wild.",
+                dietInfo: "Primarily eats leaves, shoots, stems, and occasionally fruit. They spend about 30% of their day feeding.",
+                behavior: "Live in stable family groups. Silverbacks protect the group and make all major decisions."
+            },
+            {
+                id: 3,
+                name: "African Elephant",
+                scientificName: "Loxodonta africana",
+                image: "assets/images/animals/elephant.jpg",
+                habitat: "savanna",
+                diet: "herbivore",
+                status: "vulnerable",
+                location: "Sub-Saharan Africa",
+                size: "3-4 meters, 2,000-6,300 kg",
+                description: "The African elephant is the largest land animal on Earth. They have complex social structures and are known for their intelligence and memory.",
+                facts: [
+                    "Trunk has over 40,000 muscles",
+                    "Can communicate using infrasound below human hearing",
+                    "Recognize themselves in mirrors",
+                    "Mourn their dead and visit burial sites"
+                ],
+                conservationInfo: "Severely threatened by ivory poaching and habitat fragmentation. Conservation includes anti-poaching patrols and habitat corridors.",
+                dietInfo: "Eats up to 300 pounds of vegetation daily including grass, leaves, bark, and fruit.",
+                behavior: "Live in matriarchal herds. Use tools and show empathy toward other elephants."
+            },
+            {
+                id: 4,
+                name: "Giant Panda",
+                scientificName: "Ailuropoda melanoleuca",
+                image: "assets/images/animals/panda.jpg",
+                habitat: "forest",
+                diet: "herbivore",
+                status: "vulnerable",
+                location: "Central China",
+                size: "1.2-1.9 meters, 85-125 kg",
+                description: "Giant pandas are beloved bears known for their distinctive black and white coloring. Despite being classified as carnivores, they survive almost entirely on bamboo.",
+                facts: [
+                    "Spend 10-16 hours a day eating bamboo",
+                    "Have an extended wrist bone that functions like a thumb",
+                    "Newborns are 1/900th the size of their mother",
+                    "Can stand on their hind legs to appear larger"
+                ],
+                conservationInfo: "Conservation efforts in China have helped increase their population through protected reserves and breeding programs.",
+                dietInfo: "99% of their diet is bamboo. They have special digestive systems to process this tough plant.",
+                behavior: "Mostly solitary except during mating season. Excellent climbers despite their size."
+            },
+            {
+                id: 5,
+                name: "African Lion",
+                scientificName: "Panthera leo",
+                image: "assets/images/animals/lion.jpg",
+                habitat: "savanna",
+                diet: "carnivore",
+                status: "vulnerable",
+                location: "Sub-Saharan Africa",
+                size: "1.7-2.5 meters, 120-190 kg",
+                description: "Known as the 'king of the jungle,' lions are the only cats that live in social groups called prides. Males are recognizable by their magnificent manes.",
+                facts: [
+                    "A lion's roar can be heard up to 8 km away",
+                    "Females do 85-90% of the hunting",
+                    "Sleep for 16-20 hours per day",
+                    "Manes darken with age and indicate fitness"
+                ],
+                conservationInfo: "Population has declined by 43% in the last 21 years due to habitat loss and human conflict.",
+                dietInfo: "Hunt large herbivores like wildebeest, zebra, and buffalo. They are opportunistic feeders.",
+                behavior: "Live in prides of related females and their offspring. Males defend the territory."
+            },
+            {
+                id: 6,
+                name: "Emperor Penguin",
+                scientificName: "Aptenodytes forsteri",
+                image: "assets/images/animals/penguin.jpg",
+                habitat: "arctic",
+                diet: "carnivore",
+                status: "least concern",
+                location: "Antarctica",
+                size: "1.1-1.3 meters, 22-45 kg",
+                description: "The largest of all penguins, emperor penguins are famous for their incredible breeding cycle in the harsh Antarctic winter.",
+                facts: [
+                    "Can dive deeper than any other bird - up to 565 meters",
+                    "Males incubate eggs for 2 months without eating",
+                    "Huddle together for warmth in -60°C temperatures",
+                    "Have specially adapted hemoglobin for deep diving"
+                ],
+                conservationInfo: "Climate change threatens their sea ice breeding grounds. Protected under Antarctic Treaty.",
+                dietInfo: "Primarily eat fish, squid, and krill. Can hold their breath for up to 20 minutes while hunting.",
+                behavior: "Form large colonies for breeding. Males balance eggs on their feet to keep them warm."
+            },
+            {
+                id: 7,
+                name: "Toco Toucan",
+                scientificName: "Ramphastos toco",
+                image: "assets/images/animals/toucan.jpg",
+                habitat: "jungle",
+                diet: "omnivore",
+                status: "least concern",
+                location: "South America",
+                size: "55-65 cm, 500-860 g",
+                description: "The largest and most recognizable toucan species, known for its enormous colorful bill that comprises one-third of its body length.",
+                facts: [
+                    "Bill is lightweight despite its size",
+                    "Uses bill to regulate body temperature",
+                    "Nests in tree cavities",
+                    "Can throw fruit up and catch it in its bill"
+                ],
+                conservationInfo: "Widespread and common, though habitat loss affects local populations.",
+                dietInfo: "Eats mostly fruit but also insects, eggs, and small reptiles. Important seed dispersers.",
+                behavior: "Social birds that live in small flocks. Communicate with croaking calls."
+            },
+            {
+                id: 8,
+                name: "Howler Monkey",
+                scientificName: "Alouatta",
+                image: "assets/images/animals/monkey.jpg",
+                habitat: "jungle",
+                diet: "herbivore",
+                status: "least concern",
+                location: "Central and South America",
+                size: "56-92 cm, 4-10 kg",
+                description: "Known for their incredibly loud calls that can travel 5 km through dense forest. They are the largest New World monkeys.",
+                facts: [
+                    "Loudest land animal in the Western Hemisphere",
+                    "Prehensile tail acts as a fifth limb",
+                    "Spend 70% of their time resting",
+                    "Live in troops of 6-15 individuals"
+                ],
+                conservationInfo: "Some species are threatened by habitat loss, but most populations are stable.",
+                dietInfo: "Primarily eat leaves, supplemented with fruits and flowers. Have specialized digestive systems.",
+                behavior: "Arboreal and diurnal. Use loud calls to mark territory and communicate with other troops."
+            },
+            {
+                id: 9,
+                name: "Nile Crocodile",
+                scientificName: "Crocodylus niloticus",
+                image: "assets/images/animals/crocodile.jpg",
+                habitat: "aquatic",
+                diet: "carnivore",
+                status: "least concern",
+                location: "Africa",
+                size: "3.5-5 meters, 225-750 kg",
+                description: "Africa's largest freshwater predator, known for its immense power and ancient lineage dating back to the time of dinosaurs.",
+                facts: [
+                    "Can hold breath for up to 2 hours underwater",
+                    "Has the strongest bite of any animal",
+                    "Temperature determines offspring gender",
+                    "Can live up to 70-100 years"
+                ],
+                conservationInfo: "Population recovered after past overhunting. Now protected in many areas.",
+                dietInfo: "Apex predator that eats fish, birds, and mammals. Uses 'death roll' to subdue large prey.",
+                behavior: "Ambush predators that bask in the sun to regulate body temperature. Excellent swimmers."
+            },
+            {
+                id: 10,
+                name: "Snow Leopard",
+                scientificName: "Panthera uncia",
+                image: "assets/images/animals/leopard.jpg",
+                habitat: "forest",
+                diet: "carnivore",
+                status: "vulnerable",
+                location: "Central Asia",
+                size: "1.0-1.3 meters, 27-55 kg",
+                description: "Known as the 'ghost of the mountains,' snow leopards are perfectly adapted to life in high altitudes with thick fur and large paws.",
+                facts: [
+                    "Can jump up to 15 meters horizontally",
+                    "Use their tail as a blanket in cold weather",
+                    "Paws act as natural snowshoes",
+                    "Rarely seen by humans due to elusive nature"
+                ],
+                conservationInfo: "Threatened by poaching and habitat loss. Only 4,000-6,500 remain in the wild.",
+                dietInfo: "Hunt blue sheep, ibex, and smaller mammals. Can take down prey three times their weight.",
+                behavior: "Solitary and crepuscular. Mark territory with scrapes and scent marks."
+            },
+            {
+                id: 11,
+                name: "Orangutan",
+                scientificName: "Pongo",
+                image: "assets/images/animals/orangutan.jpg",
+                habitat: "jungle",
+                diet: "omnivore",
+                status: "endangered",
+                location: "Borneo and Sumatra",
+                size: "1.1-1.4 meters, 33-82 kg",
+                description: "The 'person of the forest' is one of our closest relatives, sharing 97% of our DNA. They are the largest arboreal mammals.",
+                facts: [
+                    "Build new nests every night in trees",
+                    "Use leaves as umbrellas and tools",
+                    "Males develop large cheek pads when mature",
+                    "Can live up to 50 years in the wild"
+                ],
+                conservationInfo: "Critically endangered due to deforestation for palm oil plantations.",
+                dietInfo: "Eat over 400 types of food including fruits, leaves, bark, and occasionally insects.",
+                behavior: "Mostly solitary. Females raise offspring for 6-8 years, the longest childhood of any animal except humans."
+            },
+            {
+                id: 12,
+                name: "Arctic Fox",
+                scientificName: "Vulpes lagopus",
+                image: "assets/images/animals/arctic-fox.jpg",
+                habitat: "arctic",
+                diet: "omnivore",
+                status: "least concern",
+                location: "Arctic Circle",
+                size: "46-68 cm, 1.4-9.4 kg",
+                description: "Perfectly adapted to frigid environments, arctic foxes change their coat color with the seasons and can survive temperatures as low as -50°C.",
+                facts: [
+                    "Fur changes from white to brown with seasons",
+                    "Can survive temperatures of -50°C",
+                    "Follow polar bears to scavenge leftovers",
+                    "Have the warmest fur of any mammal"
+                ],
+                conservationInfo: "Population fluctuates with prey availability. Climate change poses long-term threats.",
+                dietInfo: "Eats lemmings, voles, birds, eggs, and carrion. Caches extra food for winter.",
+                behavior: "Monogamous and live in family groups. Use complex tunnel systems for shelter."
+            }
+        ];
+    </script>
+    
+    <script src="js/gsap-animations.js"></script>
+    <script src="js/virtualTour.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/animalDetails.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Leaflet.js for Maps -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Optional: TopoJSON for regions -->
+<script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+</body>
+</html>

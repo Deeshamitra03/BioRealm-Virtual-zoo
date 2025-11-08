@@ -1,0 +1,15 @@
+{
+  "name": "biorelm-virtual-zoo",
+  "version": "1.0.0",
+  "description": "Virtual Zoo Experience Platform",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "start": "live-server --port=3000"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}

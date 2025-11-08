@@ -1,0 +1,491 @@
+{
+  "quizzes": [
+    {
+      "id": "food-chains",
+      "title": "Food Chains & Ecosystems",
+      "description": "Test your knowledge about how energy flows through ecosystems",
+      "icon": "fas fa-link",
+      "questions": [
+        {
+          "id": 1,
+          "question": "In a typical food chain, which organism is usually a primary producer?",
+          "options": [
+            "Grass",
+            "Rabbit", 
+            "Fox",
+            "Mushroom"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Grass is a primary producer because it creates its own food through photosynthesis.",
+          "image": null
+        },
+        {
+          "id": 2,
+          "question": "What happens if you remove all predators from an ecosystem?",
+          "options": [
+            "Prey population decreases",
+            "Prey population increases dramatically",
+            "Plants stop growing",
+            "Nothing changes"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Without predators, prey populations can grow unchecked, potentially leading to overgrazing and ecosystem imbalance.",
+          "image": null
+        },
+        {
+          "id": 3,
+          "question": "Which animal is typically an apex predator in its ecosystem?",
+          "options": [
+            "Deer",
+            "Rabbit",
+            "Lion", 
+            "Mouse"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Lions are apex predators because they have no natural predators in their ecosystem.",
+          "image": null
+        },
+        {
+          "id": 4,
+          "question": "What is the role of decomposers in a food chain?",
+          "options": [
+            "Hunt other animals",
+            "Produce oxygen",
+            "Break down dead organisms",
+            "Provide shelter"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Decomposers like fungi and bacteria break down dead organisms, returning nutrients to the soil.",
+          "image": null
+        },
+        {
+          "id": 5,
+          "question": "In an ocean food chain, what do krill typically eat?",
+          "options": [
+            "Small fish",
+            "Phytoplankton",
+            "Sharks",
+            "Seaweed"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Krill are small crustaceans that feed on phytoplankton, which are microscopic marine plants.",
+          "image": null
+        },
+        {
+          "id": 6,
+          "question": "What percentage of energy is typically transferred from one trophic level to the next?",
+          "options": [
+            "1-5%",
+            "10-15%",
+            "50-60%",
+            "90-95%"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Only about 10% of energy is transferred between trophic levels due to energy loss as heat and through metabolic processes.",
+          "image": null
+        },
+        {
+          "id": 7,
+          "question": "Which of these represents a detrital food chain?",
+          "options": [
+            "Grass → Grasshopper → Bird",
+            "Dead leaves → Earthworm → Robin",
+            "Algae → Small fish → Large fish",
+            "Tree → Giraffe → Lion"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Detrital food chains start with dead organic matter and involve decomposers and detritivores.",
+          "image": null
+        },
+        {
+          "id": 8,
+          "question": "What is a keystone species?",
+          "options": [
+            "The largest animal in an ecosystem",
+            "A species that has a disproportionately large effect on its environment",
+            "The most numerous species",
+            "The fastest reproducing species"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Keystone species have a major impact on their ecosystem relative to their abundance, like sea otters in kelp forests.",
+          "image": null
+        },
+        {
+          "id": 9,
+          "question": "In a food web, what happens when two species compete for the same resource?",
+          "options": [
+            "They always become friends",
+            "One species usually goes extinct",
+            "They may partition resources or one may outcompete the other",
+            "They merge into one species"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Competitive exclusion can occur, or species may evolve to use different resources to coexist.",
+          "image": null
+        },
+        {
+          "id": 10,
+          "question": "What is biomagnification?",
+          "options": [
+            "Animals getting larger over generations",
+            "Increase in toxin concentration up the food chain",
+            "Rapid population growth",
+            "Energy accumulation in predators"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Biomagnification occurs when toxins become more concentrated in organisms higher up the food chain.",
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": "animal-adaptations",
+      "title": "Animal Adaptations",
+      "description": "Learn how animals survive in their environments",
+      "icon": "fas fa-paw",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Why do arctic foxes change their fur color with seasons?",
+          "options": [
+            "To attract mates",
+            "For temperature regulation", 
+            "For camouflage",
+            "To show dominance"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Arctic foxes change from white in winter to brown in summer for better camouflage in different environments.",
+          "image": null
+        },
+        {
+          "id": 2,
+          "question": "What special adaptation helps camels survive in deserts?",
+          "options": [
+            "Webbed feet",
+            "Hump for fat storage",
+            "Sharp claws",
+            "Long neck"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Camels store fat in their humps, which can be converted to water and energy when resources are scarce.",
+          "image": null
+        },
+        {
+          "id": 3,
+          "question": "How do penguins keep warm in freezing temperatures?",
+          "options": [
+            "They hibernate",
+            "Thick fur and fat layers",
+            "They migrate south", 
+            "Special heating system"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Penguins have dense, waterproof feathers and a thick layer of blubber for insulation against cold.",
+          "image": null
+        },
+        {
+          "id": 4,
+          "question": "What is the main purpose of a chameleon changing colors?",
+          "options": [
+            "Temperature control",
+            "Communication",
+            "Camouflage",
+            "All of the above"
+          ],
+          "correctAnswer": 3,
+          "explanation": "Chameleons change colors for camouflage, temperature regulation, and communication with other chameleons.",
+          "image": null
+        },
+        {
+          "id": 5,
+          "question": "Why do some animals have patterns that look like eyes?",
+          "options": [
+            "To see better",
+            "To attract prey",
+            "To scare predators",
+            "For beauty"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Eye-like patterns can startle or confuse predators, giving the animal time to escape.",
+          "image": null
+        },
+        {
+          "id": 6,
+          "question": "What unique adaptation allows woodpeckers to hammer trees without brain injury?",
+          "options": [
+            "Extra-thick skull",
+            "Shock-absorbing beak structure",
+            "Special neck muscles acting as shock absorbers",
+            "They do get concussions regularly"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Woodpeckers have specialized neck muscles and a unique skull structure that acts as a shock absorber.",
+          "image": null
+        },
+        {
+          "id": 7,
+          "question": "How do dolphins sleep without drowning?",
+          "options": [
+            "They don't sleep",
+            "They sleep on land",
+            "Only one brain hemisphere sleeps at a time",
+            "They have gills for sleeping"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Dolphins practice unihemispheric sleep, where one half of the brain sleeps while the other remains awake for breathing and awareness.",
+          "image": null
+        },
+        {
+          "id": 8,
+          "question": "What is countershading camouflage?",
+          "options": [
+            "Changing colors rapidly",
+            "Dark on top, light on bottom",
+            "Mimicking other objects",
+            "Transparent body parts"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Countershading makes animals harder to see - dark backs blend with deep water/ground, light bellies blend with bright sky/surface.",
+          "image": null
+        },
+        {
+          "id": 9,
+          "question": "Why do some deep-sea fish produce their own light?",
+          "options": [
+            "To read in the dark",
+            "For communication, attracting prey, and camouflage",
+            "To warm themselves",
+            "It's a chemical accident"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Bioluminescence serves multiple purposes: attracting mates, luring prey, and counter-illumination camouflage.",
+          "image": null
+        },
+        {
+          "id": 10,
+          "question": "What adaptation allows snakes to swallow prey larger than their head?",
+          "options": [
+            "Dislocating jaw",
+            "Stretchy skin",
+            "Movable skull bones and stretchy skin",
+            "They can't actually do this"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Snakes have incredibly flexible skull bones connected by stretchy ligaments, allowing them to swallow large prey.",
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": "conservation",
+      "title": "Conservation & Threats",
+      "description": "Understand wildlife conservation challenges",
+      "icon": "fas fa-leaf",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the biggest threat to most endangered species?",
+          "options": [
+            "Climate change",
+            "Habitat loss",
+            "Pollution",
+            "Natural predators"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Habitat loss due to human activities like deforestation and urbanization is the primary threat to most endangered species.",
+          "image": null
+        },
+        {
+          "id": 2,
+          "question": "How does climate change affect polar bears?",
+          "options": [
+            "They get too hot",
+            "Loss of sea ice habitat",
+            "They change color",
+            "They eat more fish"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Polar bears depend on sea ice for hunting seals. Melting ice reduces their hunting grounds and access to food.",
+          "image": null
+        },
+        {
+          "id": 3,
+          "question": "What is the main purpose of wildlife corridors?",
+          "options": [
+            "Tourist attractions",
+            "Connect fragmented habitats",
+            "Animal entertainment",
+            "Research facilities"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Wildlife corridors connect isolated habitat patches, allowing animals to move between areas safely.",
+          "image": null
+        },
+        {
+          "id": 4,
+          "question": "Why are bees important for ecosystems?",
+          "options": [
+            "They make honey",
+            "They pollinate plants",
+            "They control pests",
+            "They are food for birds"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Bees are crucial pollinators for many plants, including food crops that humans depend on.",
+          "image": null
+        },
+        {
+          "id": 5,
+          "question": "What can individuals do to help wildlife conservation?",
+          "options": [
+            "Visit zoos frequently",
+            "Support sustainable products",
+            "Keep wild animals as pets",
+            "Feed animals in parks"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Choosing sustainable products and supporting conservation organizations are effective ways to help wildlife.",
+          "image": null
+        },
+        {
+          "id": 6,
+          "question": "What is the 'Sixth Mass Extinction' referring to?",
+          "options": [
+            "The extinction of dinosaurs",
+            "Current human-caused extinction event",
+            "A future predicted extinction",
+            "Extinction of marine life only"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Scientists refer to the current era as the Sixth Mass Extinction due to unprecedented species loss caused by human activities.",
+          "image": null
+        },
+        {
+          "id": 7,
+          "question": "Why are coral reefs particularly vulnerable to climate change?",
+          "options": [
+            "They need cold water",
+            "Coral bleaching from warm water",
+            "They attract too many tourists",
+            "Fish eat them when water warms"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Warmer water temperatures cause corals to expel their symbiotic algae, leading to coral bleaching and potential death.",
+          "image": null
+        },
+        {
+          "id": 8,
+          "question": "What is the 'tragedy of the commons' in conservation?",
+          "options": [
+            "Animals fighting over territory",
+            "Shared resources being overused by individuals acting in self-interest",
+            "Common species going extinct",
+            "Public parks being destroyed"
+          ],
+          "correctAnswer": 1,
+          "explanation": "When individuals act in their own self-interest regarding shared resources, it can lead to depletion of those resources for everyone.",
+          "image": null
+        },
+        {
+          "id": 9,
+          "question": "How does plastic pollution specifically affect marine animals?",
+          "options": [
+            "They use it for shelter",
+            "Ingestion, entanglement, and toxic effects",
+            "It helps them float",
+            "No significant effects"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Marine animals mistake plastic for food, get entangled in debris, and suffer from chemical contamination.",
+          "image": null
+        },
+        {
+          "id": 10,
+          "question": "What is 'rewilding' in conservation?",
+          "options": [
+            "Making animals wild again",
+            "Restoring ecosystems to their natural state, including reintroducing species",
+            "Teaching animals survival skills",
+            "Creating new species"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Rewilding involves restoring natural processes and reintroducing missing species to create self-sustaining ecosystems.",
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": "animal-behavior",
+      "title": "Animal Behavior",
+      "description": "Discover fascinating animal behaviors and social structures",
+      "icon": "fas fa-brain",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Why do fireflies light up?",
+          "options": [
+            "To warm themselves",
+            "To communicate and attract mates",
+            "To scare predators",
+            "It's a chemical accident"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Fireflies use bioluminescence primarily for mating rituals, with each species having unique flash patterns.",
+          "image": null
+        },
+        {
+          "id": 2,
+          "question": "What is 'echolocation' used for?",
+          "options": [
+            "Digging holes",
+            "Navigation and hunting using sound waves",
+            "Communication over long distances",
+            "Attracting mates"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Animals like bats and dolphins emit sound waves and interpret the echoes to navigate and locate prey in dark environments.",
+          "image": null
+        },
+        {
+          "id": 3,
+          "question": "Why do geese fly in a V formation?",
+          "options": [
+            "It looks pretty",
+            "To conserve energy through aerodynamics",
+            "The leader knows the way",
+            "To stay warm"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The V formation creates uplift for following birds, reducing energy expenditure by up to 50% on long migrations.",
+          "image": null
+        },
+        {
+          "id": 4,
+          "question": "What is unique about octopus intelligence?",
+          "options": [
+            "They can use tools and solve complex puzzles",
+            "They have the largest brains",
+            "They can speak human languages",
+            "They build cities"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Octopuses demonstrate remarkable problem-solving abilities, use tools, and can even open jars to get food.",
+          "image": null
+        },
+        {
+          "id": 5,
+          "question": "Why do some birds perform elaborate dances?",
+          "options": [
+            "For exercise",
+            "Courtship displays to attract mates",
+            "To mark territory",
+            "To communicate danger"
+          ],
+          "explanation": "Complex mating dances demonstrate fitness and genetic quality to potential mates in species like birds of paradise.",
+          "correctAnswer": 1,
+          "image": null
+        }
+      ]
+    }
+  ]
+}

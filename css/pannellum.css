@@ -1,0 +1,490 @@
+/* Pannellum Viewer Custom Styles for BioRelm */
+.pnlm-container {
+    position: relative;
+    overflow: hidden;
+    touch-action: none;
+    outline: none;
+    font-family: var(--font-body);
+    border-radius: 15px;
+}
+
+.pnlm-render-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.pnlm-controls-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* Controls Styling */
+.pnlm-controls {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    pointer-events: auto;
+}
+
+.pnlm-zoom-controls {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: auto;
+}
+
+.pnlm-zoom-in, .pnlm-zoom-out {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: rgba(26, 77, 45, 0.9);
+    color: var(--accent-yellow);
+    border: 2px solid var(--accent-yellow);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-light);
+}
+
+.pnlm-zoom-in:hover, .pnlm-zoom-out:hover {
+    background: var(--accent-yellow);
+    color: var(--jungle-green);
+    transform: scale(1.1);
+}
+
+.pnlm-compass {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background: rgba(26, 77, 45, 0.9);
+    border: 2px solid var(--accent-yellow);
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+    box-shadow: var(--shadow-light);
+}
+
+.pnlm-fullscreen-toggle {
+    position: absolute;
+    right: 15px;
+    bottom: 70px;
+    width: 40px;
+    height: 40px;
+    background: rgba(26, 77, 45, 0.9);
+    color: var(--accent-yellow);
+    border: 2px solid var(--accent-yellow);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-light);
+}
+
+.pnlm-fullscreen-toggle:hover {
+    background: var(--accent-yellow);
+    color: var(--jungle-green);
+    transform: scale(1.1);
+}
+
+/* Loading Box */
+.pnlm-load-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(26, 77, 45, 0.95);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid var(--accent-yellow);
+    box-shadow: var(--shadow-heavy);
+    backdrop-filter: var(--blur-effect);
+}
+
+.pnlm-load-box p {
+    margin: 15px 0 0 0;
+    font-size: 16px;
+    color: var(--accent-yellow);
+}
+
+/* Hide default pannellum logo */
+.pnlm-logo {
+    display: none !important;
+}
+
+/* Hotspot Styles - Custom for BioRelm */
+.pnlm-hotspot {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.pnlm-hotspot-base {
+    border: none !important;
+    background: none !important;
+}
+
+/* Custom Hotspot Styling */
+.custom-hotspot {
+    width: 35px !important;
+    height: 35px !important;
+    background: rgba(247, 197, 72, 0.9) !important;
+    border: 3px solid var(--accent-orange) !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+    animation: pulse 2s infinite !important;
+}
+
+.custom-hotspot:hover {
+    background: rgba(230, 126, 34, 0.95) !important;
+    transform: scale(1.3) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+.custom-hotspot::before {
+    content: '🔍' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    font-size: 14px !important;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5)) !important;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(247, 197, 72, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(247, 197, 72, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(247, 197, 72, 0);
+    }
+}
+
+/* Hotspot Tooltip */
+.pnlm-hotspot-tooltip {
+    position: absolute !important;
+    bottom: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background: rgba(26, 77, 45, 0.95) !important;
+    color: white !important;
+    padding: 10px 15px !important;
+    border-radius: 8px !important;
+    white-space: nowrap !important;
+    font-size: 14px !important;
+    border: 2px solid var(--accent-yellow) !important;
+    margin-bottom: 8px !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    transition: opacity 0.3s ease !important;
+    backdrop-filter: var(--blur-effect) !important;
+    box-shadow: var(--shadow-medium) !important;
+    font-family: var(--font-body) !important;
+    font-weight: 600 !important;
+}
+
+.pnlm-hotspot:hover .pnlm-hotspot-tooltip {
+    opacity: 1 !important;
+}
+
+.pnlm-hotspot-tooltip::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    border: 6px solid transparent !important;
+    border-top-color: var(--accent-yellow) !important;
+}
+
+/* Scene List */
+.pnlm-scene-list-container {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    pointer-events: auto;
+}
+
+.pnlm-scene-list {
+    background: rgba(26, 77, 45, 0.95) !important;
+    border: 2px solid var(--accent-yellow) !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    max-height: 200px !important;
+    overflow-y: auto !important;
+    backdrop-filter: var(--blur-effect) !important;
+    box-shadow: var(--shadow-medium) !important;
+}
+
+.pnlm-scene-list-item {
+    padding: 8px 12px !important;
+    cursor: pointer !important;
+    color: white !important;
+    border-radius: 5px !important;
+    margin: 3px 0 !important;
+    transition: all 0.3s ease !important;
+    font-family: var(--font-body) !important;
+}
+
+.pnlm-scene-list-item:hover {
+    background: rgba(247, 197, 72, 0.3) !important;
+    transform: translateX(5px) !important;
+}
+
+.pnlm-scene-list-item.active {
+    background: var(--accent-yellow) !important;
+    color: var(--jungle-green) !important;
+    font-weight: bold !important;
+}
+
+/* Info Box */
+.pnlm-info-box {
+    position: absolute !important;
+    top: 15px !important;
+    left: 15px !important;
+    background: rgba(26, 77, 45, 0.95) !important;
+    color: white !important;
+    padding: 15px 20px !important;
+    border-radius: 10px !important;
+    border: 2px solid var(--accent-yellow) !important;
+    max-width: 300px !important;
+    pointer-events: auto !important;
+    backdrop-filter: var(--blur-effect) !important;
+    box-shadow: var(--shadow-medium) !important;
+    font-family: var(--font-body) !important;
+}
+
+.pnlm-title {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    margin: 0 0 8px 0 !important;
+    color: var(--accent-yellow) !important;
+    font-family: var(--font-heading) !important;
+}
+
+.pnlm-author {
+    font-size: 14px !important;
+    opacity: 0.8 !important;
+    margin: 0 !important;
+}
+
+/* Loading Spinner */
+.pnlm-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+}
+
+.pnlm-loading::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 4px solid var(--accent-yellow);
+    border-color: var(--accent-yellow) transparent var(--accent-yellow) transparent;
+    animation: pnlm-spin 1.2s linear infinite;
+}
+
+@keyframes pnlm-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error Message */
+.pnlm-error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(231, 76, 60, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #c0392b;
+    backdrop-filter: var(--blur-effect);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .pnlm-controls {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .pnlm-zoom-controls {
+        right: 10px;
+    }
+    
+    .pnlm-zoom-in, .pnlm-zoom-out {
+        width: 35px;
+        height: 35px;
+        line-height: 31px;
+        font-size: 16px;
+    }
+    
+    .pnlm-compass {
+        top: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .pnlm-fullscreen-toggle {
+        bottom: 55px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        line-height: 31px;
+    }
+    
+    .pnlm-info-box {
+        top: 10px;
+        left: 10px;
+        max-width: 200px;
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    
+    .pnlm-scene-list-container {
+        bottom: 10px;
+        left: 10px;
+    }
+    
+    .custom-hotspot {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    
+    .custom-hotspot::before {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .pnlm-info-box {
+        max-width: 150px;
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+    
+    .pnlm-scene-list {
+        max-width: 150px;
+    }
+}
+
+/* Fullscreen Styles */
+:-webkit-full-screen .pnlm-container {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+}
+
+:-moz-full-screen .pnlm-container {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+}
+
+:-ms-fullscreen .pnlm-container {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+}
+
+:fullscreen .pnlm-container {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+}
+
+/* Custom Scrollbar for Scene List */
+.pnlm-scene-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.pnlm-scene-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.pnlm-scene-list::-webkit-scrollbar-thumb {
+    background: var(--accent-yellow);
+    border-radius: 3px;
+}
+
+.pnlm-scene-list::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-orange);
+}
+
+/* Animation for scene transitions */
+.pnlm-render-container {
+    transition: opacity 0.5s ease;
+}
+
+/* Focus styles for accessibility */
+.pnlm-zoom-in:focus,
+.pnlm-zoom-out:focus,
+.pnlm-fullscreen-toggle:focus,
+.pnlm-compass:focus {
+    outline: 2px solid var(--accent-yellow);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .custom-hotspot {
+        background: rgba(255, 255, 255, 0.95) !important;
+        border: 3px solid #000 !important;
+    }
+    
+    .pnlm-hotspot-tooltip {
+        background: #000 !important;
+        border: 2px solid #fff !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .custom-hotspot {
+        animation: none !important;
+    }
+    
+    .pnlm-loading::after {
+        animation: none !important;
+    }
+    
+    .pnlm-hotspot:hover {
+        transform: scale(1.1) !important;
+    }
+}
