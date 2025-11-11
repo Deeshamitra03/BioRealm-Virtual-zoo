@@ -66,3 +66,29 @@ An immersive web-based platform that revolutionizes wildlife education through i
    ```bash
    git clone https://github.com/Deeshamitra03/BioRealm-Virtual-zoo.git
    cd BioRealm-Virtual-zoo
+
+   Project structure:
+   BioRealm-Virtual-zoo/
+├── 📄 index.html                 # Main application entry point
+├── 📁 css/                       # Stylesheets
+│   ├── style.css                # Main styling with jungle theme
+│   └── pannellum.css            # 360° viewer styles
+├── 📁 js/                        # JavaScript modules
+│   ├── main.js                  # Application controller
+│   ├── virtualTour.js           # 360° safari functionality
+│   ├── quiz.js                  # Interactive quiz system
+│   ├── animalDetails.js         # Animal modal & details manager
+│   └── gsap-animations.js       # GSAP animations & effects
+├── 📁 assets/                    # Media resources
+│   ├── 📁 images/
+│   │   ├── 📁 animals/          # Animal photographs (60+ species)
+│   │   └── 📁 360/              # Panorama images for virtual tours
+│   └── 📁 sounds/               # Audio files
+│       ├── jungle-ambience.mp3
+│       ├── animal-sounds/
+│       └── interface-sounds/
+├── 📁 data/                      # Application data
+│   └── animals.json             # Comprehensive animal database
+├── 📄 package.json              # Project dependencies
+├── 📄 README.md                 # Project documentation
+└── 📄 .gitignore                # Git ignore rules
