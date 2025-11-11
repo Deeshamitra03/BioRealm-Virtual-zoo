@@ -1,0 +1,36 @@
+name: Build LaTeX paper
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Compile paper.tex (latexmk)
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: paper.tex
+
+      - name: Upload compiled paper PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: paper-pdf
+          path: paper.pdf
+
+      - name: Compile expanded report (latexmk)
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: report_full.tex
+
+      - name: Upload compiled expanded report PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: report-full-pdf
+          path: report_full.pdf
